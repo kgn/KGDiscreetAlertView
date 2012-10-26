@@ -25,19 +25,25 @@
 
 - (IBAction)alert2:(id)sender{
     [self.alert3 hide];
-    self.alert2 =
+    KGDiscreteAlertView *alert2 =
     [KGDiscreteAlertView showDiscreteAlertWithText:@"Even multiline messages just...\n\nwork!"
                                                 inView:self.view];
+    if(alert2){
+        self.alert2 = alert2;
+    }
 }
 
 - (IBAction)alert3:(id)sender{
     [self.alert2 hide];
-    self.alert3 =
+    KGDiscreteAlertView *alert3 =
     [KGDiscreteAlertView showDiscreteAlertWithText:@"The old lady pulled her spectacles down and looked "
      "over them about the room; then she put them up and looked out under them. She seldom or never looked "
      "THROUGH them for so small a thing as a boy; they were her state pair, the pride of her heart, and were "
      "built for \"style,\" not service -- she could have seen through a pair of stove-lids just as well. "
                                                 inView:self.view maxWidth:500 delay:0];
+    if(alert3){
+        self.alert3 = alert3;
+    }
 }
 
 @end
