@@ -26,6 +26,9 @@
 // if the delay is 0 the alert will be 'sticky' and will not be dismissed until `hide` is called.
 + (id)showDiscreteAlertWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay;
 
+// Hide all of the discrete alerts in a given view.
++ (void)hideAllDiscreteAlertsInView:(UIView *)view;
+
 #pragma mark - Instance Methods
 
 // Show a discrete alert with the given text in a view,

@@ -59,6 +59,15 @@ static NSTimeInterval const kDelay = 3;
     return discreteAlertView;
 }
 
++ (void)hideAllDiscreteAlertsInView:(UIView *)view{
+    for(UIView *subview in view.subviews){
+        if([subview isKindOfClass:[KGDiscreteAlertView class]] &&
+           ![(KGDiscreteAlertView *)subview willHide]){
+            [(KGDiscreteAlertView *)subview hide];
+        }
+    }
+}
+
 - (void)showWithText:(NSString *)text inView:(UIView *)view{
     return [self showWithText:text inView:view delay:kDelay];
 }
@@ -68,13 +77,7 @@ static NSTimeInterval const kDelay = 3;
 }
 
 - (void)showWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay{
-    // remove all other discrete alert views
-    for(UIView *subview in view.subviews){
-        if([subview isKindOfClass:[KGDiscreteAlertView class]] &&
-           ![(KGDiscreteAlertView *)subview willHide]){
-            [(KGDiscreteAlertView *)subview hide];
-        }
-    }
+    [[self class] hideAllDiscreteAlertsInView:view];
     
     self.label.text = text;
     [self sizeLabel:self.label toFitTextWithWidth:MIN(maxWidth, CGRectGetWidth(view.bounds)-kPadding*2)];
