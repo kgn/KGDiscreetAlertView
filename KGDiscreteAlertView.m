@@ -55,26 +55,24 @@ static NSTimeInterval const kDelay = 3;
 
 + (id)showDiscreteAlertWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay{
     id discreteAlertView = [[[self class] alloc] init];
-    if([discreteAlertView showWithText:text inView:view maxWidth:maxWidth delay:delay]){
-        return discreteAlertView;
-    }
-    return nil;
+    [discreteAlertView showWithText:text inView:view maxWidth:maxWidth delay:delay];
+    return discreteAlertView;
 }
 
-- (BOOL)showWithText:(NSString *)text inView:(UIView *)view{
+- (void)showWithText:(NSString *)text inView:(UIView *)view{
     return [self showWithText:text inView:view delay:kDelay];
 }
 
-- (BOOL)showWithText:(NSString *)text inView:(UIView *)view delay:(NSTimeInterval)delay{
-    return [self showWithText:text inView:view maxWidth:MAXFLOAT delay:delay];
+- (void)showWithText:(NSString *)text inView:(UIView *)view delay:(NSTimeInterval)delay{
+    [self showWithText:text inView:view maxWidth:MAXFLOAT delay:delay];
 }
 
-- (BOOL)showWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay{
-    // make sure there isn't already a KGDiscreteAlertView in the view that is not being hidden
+- (void)showWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay{
+    // remove all other discrete alert views
     for(UIView *subview in view.subviews){
         if([subview isKindOfClass:[KGDiscreteAlertView class]] &&
            ![(KGDiscreteAlertView *)subview willHide]){
-            return NO;
+            [(KGDiscreteAlertView *)subview hide];
         }
     }
     
@@ -105,8 +103,6 @@ static NSTimeInterval const kDelay = 3;
             [NSTimer scheduledTimerWithTimeInterval:kDelay target:self selector:@selector(hide) userInfo:nil repeats:NO];
         }
     }];
-
-    return YES;
 }
 
 - (void)hide{
