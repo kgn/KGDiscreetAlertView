@@ -29,6 +29,8 @@ static NSTimeInterval const kDelay = 3;
         label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
         label.shadowOffset = CGSizeMake(0, 1);
         [self addSubview:label];
+
+        self.userInteractionEnabled = NO;
         self.opaque = NO;
     }
     return self;
