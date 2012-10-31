@@ -1,6 +1,6 @@
 //
 //  KGViewController.h
-//  KGDiscreteAlertViewExample
+//  KGDiscreetAlertViewExample
 //
 //  Created by David Keegan on 10/26/12.
 //  Copyright (c) 2012 David Keegan. All rights reserved.

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7308BB9D1638BFB600C8DCDE /* KGDiscreteAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7308BB9C1638BFB600C8DCDE /* KGDiscreteAlertView.m */; };
 		737C8D4B1638BED10066F127 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737C8D4A1638BED10066F127 /* UIKit.framework */; };
 		737C8D4D1638BED10066F127 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737C8D4C1638BED10066F127 /* Foundation.framework */; };
 		737C8D4F1638BED10066F127 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737C8D4E1638BED10066F127 /* CoreGraphics.framework */; };
@@ -18,12 +17,11 @@
 		73A8F7DF163B05C300C35E58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A8F7D9163B05C300C35E58 /* main.m */; };
 		73A8F7E8163B084D00C35E58 /* KGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A8F7E6163B084D00C35E58 /* KGViewController.m */; };
 		73A8F7E9163B084D00C35E58 /* KGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73A8F7E7163B084D00C35E58 /* KGViewController.xib */; };
+		73C99AAE1640DCCE00B8CFDF /* KGDiscreetAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C99AAD1640DCCE00B8CFDF /* KGDiscreetAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7308BB9B1638BFB600C8DCDE /* KGDiscreteAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KGDiscreteAlertView.h; path = ../KGDiscreteAlertView.h; sourceTree = "<group>"; };
-		7308BB9C1638BFB600C8DCDE /* KGDiscreteAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KGDiscreteAlertView.m; path = ../KGDiscreteAlertView.m; sourceTree = "<group>"; };
-		737C8D461638BED10066F127 /* KGDiscreteAlertViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGDiscreteAlertViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		737C8D461638BED10066F127 /* KGDiscreetAlertViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGDiscreetAlertViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		737C8D4A1638BED10066F127 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		737C8D4C1638BED10066F127 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		737C8D4E1638BED10066F127 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -36,6 +34,8 @@
 		73A8F7E5163B084D00C35E58 /* KGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGViewController.h; sourceTree = "<group>"; };
 		73A8F7E6163B084D00C35E58 /* KGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewController.m; sourceTree = "<group>"; };
 		73A8F7E7163B084D00C35E58 /* KGViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KGViewController.xib; sourceTree = "<group>"; };
+		73C99AAC1640DCCE00B8CFDF /* KGDiscreetAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KGDiscreetAlertView.h; path = ../KGDiscreetAlertView.h; sourceTree = "<group>"; };
+		73C99AAD1640DCCE00B8CFDF /* KGDiscreetAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KGDiscreetAlertView.m; path = ../KGDiscreetAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +55,9 @@
 		737C8D3B1638BED10066F127 = {
 			isa = PBXGroup;
 			children = (
-				7308BB9B1638BFB600C8DCDE /* KGDiscreteAlertView.h */,
-				7308BB9C1638BFB600C8DCDE /* KGDiscreteAlertView.m */,
-				73A8F7CF163B05C300C35E58 /* KGDiscreteAlertViewExample */,
+				73C99AAC1640DCCE00B8CFDF /* KGDiscreetAlertView.h */,
+				73C99AAD1640DCCE00B8CFDF /* KGDiscreetAlertView.m */,
+				73A8F7CF163B05C300C35E58 /* KGDiscreetAlertViewExample */,
 				737C8D491638BED10066F127 /* Frameworks */,
 				737C8D471638BED10066F127 /* Products */,
 			);
@@ -66,7 +66,7 @@
 		737C8D471638BED10066F127 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				737C8D461638BED10066F127 /* KGDiscreteAlertViewExample.app */,
+				737C8D461638BED10066F127 /* KGDiscreetAlertViewExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,7 +81,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		73A8F7CF163B05C300C35E58 /* KGDiscreteAlertViewExample */ = {
+		73A8F7CF163B05C300C35E58 /* KGDiscreetAlertViewExample */ = {
 			isa = PBXGroup;
 			children = (
 				73A8F7D9163B05C300C35E58 /* main.m */,
@@ -94,15 +94,15 @@
 				73A8F7D1163B05C300C35E58 /* Default.png */,
 				73A8F7D2163B05C300C35E58 /* Default@2x.png */,
 			);
-			name = KGDiscreteAlertViewExample;
+			name = KGDiscreetAlertViewExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		737C8D451638BED10066F127 /* KGDiscreteAlertViewExample */ = {
+		737C8D451638BED10066F127 /* KGDiscreetAlertViewExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 737C8D641638BED10066F127 /* Build configuration list for PBXNativeTarget "KGDiscreteAlertViewExample" */;
+			buildConfigurationList = 737C8D641638BED10066F127 /* Build configuration list for PBXNativeTarget "KGDiscreetAlertViewExample" */;
 			buildPhases = (
 				737C8D421638BED10066F127 /* Sources */,
 				737C8D431638BED10066F127 /* Frameworks */,
@@ -112,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = KGDiscreteAlertViewExample;
-			productName = KGDiscreteAlertViewExample;
-			productReference = 737C8D461638BED10066F127 /* KGDiscreteAlertViewExample.app */;
+			name = KGDiscreetAlertViewExample;
+			productName = KGDiscreetAlertViewExample;
+			productReference = 737C8D461638BED10066F127 /* KGDiscreetAlertViewExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "David Keegan";
 			};
-			buildConfigurationList = 737C8D401638BED10066F127 /* Build configuration list for PBXProject "KGDiscreteAlertViewExample" */;
+			buildConfigurationList = 737C8D401638BED10066F127 /* Build configuration list for PBXProject "KGDiscreetAlertViewExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -139,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				737C8D451638BED10066F127 /* KGDiscreteAlertViewExample */,
+				737C8D451638BED10066F127 /* KGDiscreetAlertViewExample */,
 			);
 		};
 /* End PBXProject section */
@@ -163,10 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7308BB9D1638BFB600C8DCDE /* KGDiscreteAlertView.m in Sources */,
 				73A8F7DD163B05C300C35E58 /* KGAppDelegate.m in Sources */,
 				73A8F7DF163B05C300C35E58 /* main.m in Sources */,
 				73A8F7E8163B084D00C35E58 /* KGViewController.m in Sources */,
+				73C99AAE1640DCCE00B8CFDF /* KGDiscreetAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +226,7 @@
 		737C8D651638BED10066F127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "KGDiscreteAlertViewExample-Info.plist";
+				INFOPLIST_FILE = "KGDiscreetAlertViewExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -237,7 +237,7 @@
 		737C8D661638BED10066F127 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "KGDiscreteAlertViewExample-Info.plist";
+				INFOPLIST_FILE = "KGDiscreetAlertViewExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -248,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		737C8D401638BED10066F127 /* Build configuration list for PBXProject "KGDiscreteAlertViewExample" */ = {
+		737C8D401638BED10066F127 /* Build configuration list for PBXProject "KGDiscreetAlertViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				737C8D621638BED10066F127 /* Debug */,
@@ -257,7 +257,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		737C8D641638BED10066F127 /* Build configuration list for PBXNativeTarget "KGDiscreteAlertViewExample" */ = {
+		737C8D641638BED10066F127 /* Build configuration list for PBXNativeTarget "KGDiscreetAlertViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				737C8D651638BED10066F127 /* Debug */,
