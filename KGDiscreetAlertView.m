@@ -21,8 +21,7 @@ static NSTimeInterval const kDelay = 3;
 
 - (id)init{
     if(self = [super init]){
-        self.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
-        UILabel *label = self.label = [[UILabel alloc] init];
+        UILabel *label = [[UILabel alloc] init];
         label.lineBreakMode = UILineBreakModeWordWrap;
         label.backgroundColor = [UIColor clearColor];
         label.textAlignment = UITextAlignmentCenter;
@@ -30,7 +29,9 @@ static NSTimeInterval const kDelay = 3;
         label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
         label.shadowOffset = CGSizeMake(0, 1);
         [self addSubview:label];
+        self.label = label;
 
+        self.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;        
         self.userInteractionEnabled = NO;
         self.opaque = NO;
     }
