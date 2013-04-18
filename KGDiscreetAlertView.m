@@ -19,8 +19,8 @@ static NSTimeInterval const kDelay = 3;
 
 @implementation KGDiscreetAlertView
 
-- (id)init{
-    if(self = [super init]){
+- (instancetype)init{
+    if((self = [super init])){
         UILabel *label = [[UILabel alloc] init];
         label.lineBreakMode = UILineBreakModeWordWrap;
         label.backgroundColor = [UIColor clearColor];
@@ -49,15 +49,15 @@ static NSTimeInterval const kDelay = 3;
     label.frame = frame;
 }
 
-+ (id)showDiscreetAlertWithText:(NSString *)text inView:(UIView *)view{
++ (instancetype)showDiscreetAlertWithText:(NSString *)text inView:(UIView *)view{
     return [self showDiscreetAlertWithText:text inView:view delay:kDelay];
 }
 
-+ (id)showDiscreetAlertWithText:(NSString *)text inView:(UIView *)view delay:(NSTimeInterval)delay{
++ (instancetype)showDiscreetAlertWithText:(NSString *)text inView:(UIView *)view delay:(NSTimeInterval)delay{
     return [self showDiscreetAlertWithText:text inView:view maxWidth:MAXFLOAT delay:delay];
 }
 
-+ (id)showDiscreetAlertWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay{
++ (instancetype)showDiscreetAlertWithText:(NSString *)text inView:(UIView *)view maxWidth:(CGFloat)maxWidth delay:(NSTimeInterval)delay{
     id discreetAlertView = [[[self class] alloc] init];
     [discreetAlertView showWithText:text inView:view maxWidth:maxWidth delay:delay];
     return discreetAlertView;
