@@ -10,6 +10,8 @@
 
 @interface KGDiscreetAlertView : UIView
 
+@property (nonatomic) BOOL tapToHide;
+
 #pragma mark - Convenience Class Methods
 
 // Show a discreet alert with the given text in a view,

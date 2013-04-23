@@ -31,11 +31,28 @@ static NSTimeInterval const kDelay = 3;
         [self addSubview:label];
         self.label = label;
 
-        self.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;        
+        self.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
         self.userInteractionEnabled = NO;
         self.opaque = NO;
+
+        UITapGestureRecognizer *tapGestureRecagnizer =
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
+        [self addGestureRecognizer:tapGestureRecagnizer];
     }
     return self;
+}
+
+- (void)tapAction:(UIGestureRecognizer *)gestureRecagnizer{
+    if(self.tapToHide){
+        [self hide];
+    }
+}
+
+- (void)setTapToHide:(BOOL)tapToHide{
+    if(_tapToHide != tapToHide){
+        self.userInteractionEnabled = tapToHide;
+        _tapToHide = tapToHide;
+    }
 }
 
 - (void)sizeLabel:(UILabel *)label toFitTextWithWidth:(CGFloat)width{
